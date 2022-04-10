@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1              # 1
+kind: Ingress                                 # 2
+metadata:
+  name: simpleweb-ingress                     # 3
+spec:
+  rules:                                      # 4
+    - http:
+        paths:                                # 5
+          - path: /
+            pathType: Prefix
+            backend:                          # 6
+              service:
+                name: simpleweb-cluster-ip
+                port:
+                  number: 8000

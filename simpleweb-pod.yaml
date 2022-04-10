@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: simpleweb
+spec:
+  containers:
+  - name: simpleweb
+    image: yeasy/simple-web
+    ports:
+      - containerPort: 80

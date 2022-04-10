@@ -1,0 +1,11 @@
+apiVersion: v1                # 1
+kind: Service                 # 2
+metadata:
+  name: simpleweb-cluster-ip  # 3
+spec:
+  type: ClusterIP             # 4
+  selector:
+    app: simpleweb            # 5
+  ports:                      # 6
+    - port: 8000
+      targetPort: 80
